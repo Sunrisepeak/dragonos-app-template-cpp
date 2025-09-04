@@ -51,6 +51,8 @@ xim --update index
 xlings new helloworld --template dragonos:app-template-cpp
 ```
 
+<img width="1171" height="772" alt="Image" src="https://github.com/user-attachments/assets/7c34d3c3-bffc-4d1f-a13d-8983d0af70c1" />
+
 ### 基本用法
 
 > **d2x**为xlings的项目辅助构建工具, 模板项目的程序名默认为`helloworld`, 详情见`config.xlings`
@@ -66,3 +68,4 @@ xlings new helloworld --template dragonos:app-template-cpp
 - DragonOS: https://github.com/DragonOS-Community/DragonOS
 - DragonOS包索引仓库: https://github.com/Sunrisepeak/xim-pkgindex-dragonos
 - xlings包管理器: https://github.com/d2learn/xlings
+- 问题反馈和技术交流: https://forum.d2learn.org/category/9/xlings
