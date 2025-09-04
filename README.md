@@ -2,25 +2,50 @@
 
 DragonOS的C++模板项目 - 支持自动配置DragonOS环境, 程序的安装和内核运行
 
-## 添加DragonOS包索引仓库
+---
+
+<details>
+  <summary>点击查看xlings安装命令</summary>
+
+---
+
+#### Linux
+
+```bash
+curl -fsSL https://d2learn.org/xlings-install.sh | bash
+```
+
+#### Windows - PowerShell
+
+```bash
+Invoke-Expression (Invoke-Webrequest 'https://d2learn.org/xlings-install.ps1.txt' -UseBasicParsing).Content
+```
+
+> 注: xlings具备多版本共存的包管理功能 -> [详情](https://d2learn.org/xlings)
+
+---
+
+</details>
+
+### 添加DragonOS包索引仓库
 
 ```bash
 xim --add-indexrepo dragonos:https://github.com/sunrisepeak/xim-pkgindex-dragonos.git
 xim --update index
 ```
 
-## 安装该模板项目
+### 安装该模板项目
 
-> 这里会自动配置好需要运行的环境(第一次运行需要一些时间)
+> 这里会自动配置好需要运行的环境(第一次安装依赖可能需要一些时间), 安装成功后即可在当前目录看到模板项目的目录名helloworld
 > - dragonos-dev
 > - dragonos-tool
 > - musl-gcc
 
 ```bash
-xlings install dragonos:app-template-cpp
+xlings new helloworld --template dragonos:app-template-cpp
 ```
 
-## 基本用法
+### 基本用法
 
 > 程序的默认名为`helloworld`, 详情见`config.xlings`
 
