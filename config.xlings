@@ -1,0 +1,24 @@
+-- https://github.com/d2learn/xlings
+
+xname = "helloworld"
+
+-- dependencies
+xim = {
+    ["dragonos-dev"] = "0.2.0",
+    ["dragonos-tool"] = "0.0.1",
+    ["musl-gcc"] = "15",
+}
+
+source_files = path.join(path.directory(os.scriptdir()), "src", "**.cpp")
+source_files = table.concat(os.files(source_files), " ")
+
+d2x = {
+    commands = {
+        build = string.format("musl-g++-static %s -I include -o .xlings/%s", source_files, xname),
+        run = ".xlings/" .. xname,
+        ["run-local"] = ".xlings/" .. xname,
+        ["run-kernel"] = "dotool run",
+        install = "dragonos-tool install .xlings/" .. xname,
+        clean = "rm -r .xlings/" .. xname,
+    }
+}
